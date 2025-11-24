@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages --cname 500errorgroup.xyz -d out"
   },
   "dependencies": {
     "next": "16.0.3",
