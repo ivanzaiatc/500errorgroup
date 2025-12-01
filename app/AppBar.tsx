@@ -9,9 +9,9 @@ import {
 import Link from "next/link";
 
 const navSections = [
+    { id: "about", key: "about" as const },
     { id: "products", key: "products" as const },
     { id: "services", key: "services" as const },
-    { id: "about", key: "about" as const },
     { id: "contact", key: "contact" as const },
 ];
 
