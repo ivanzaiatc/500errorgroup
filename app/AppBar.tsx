@@ -12,6 +12,7 @@ const navSections = [
     { id: "about", key: "about" as const },
     { id: "services", key: "services" as const },
     { id: "products", key: "products" as const },
+    { id: "blog", key: "blog" as const },
     { id: "contact", key: "contact" as const },
 ];
 
@@ -20,12 +21,14 @@ const localizedNavItems = {
       products: "Products",
       services: "Services",
       about: "About us",
+      blog: "Blog",
       contact: "Contact",
     },
     es: {
       products: "Productos",
       services: "Servicios",
       about: "Sobre nosotros",
+      blog: "Blog",
       contact: "Contacto",
     },
   };
