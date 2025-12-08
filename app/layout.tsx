@@ -1,23 +1,26 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Roboto } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import AppBar from "./AppBar";
-import Contact from "@/components/Contact";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
   title: "500errorgroup",
   description: "Digital partner for small and growing businesses",
+  icons: {
+    icon: "/me.png",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
@@ -26,22 +29,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${roboto.variable} font-sans antialiased`}
       >
-        <div className="flex min-h-screen flex-col bg-background text-foreground">
-          <header className="fixed top-0 left-0 right-0 z-50 border-b bg-card">
-            <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
-              <Link href="/" className="text-lg font-semibold">
-                500errorgroup
-              </Link>
-              <AppBar />
-            </div>
-          </header>
-          <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-12 px-6 py-10 pt-24">
+        <div className="flex min-h-screen flex-col bg-black text-foreground">
+          <AppBar />
+          <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-12 px-6 py-10">
             {children}
-            <Contact />
           </main>
         </div>
       </body>
