@@ -8,7 +8,7 @@ export interface PostData {
 
 export const posts: PostData[] = [
   {
-    data: "2025-12-08",
+    data: "8 Dec 2025",
     title: "Hello World",
     description: (
       <>

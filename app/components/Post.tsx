@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Image from "next/image";
 
 interface PostProps {
   data: string;
@@ -13,6 +14,15 @@ export default function Post({ data, title, description }: PostProps) {
       <h2 className="mt-2 text-2xl font-semibold text-white">{title}</h2>
       <div className="text-xl text-gray-300 leading-relaxed">
         {description}
+      </div>
+      <div className="mt-6 flex justify-end">
+        <Image
+          src="/me.png"
+          alt="Signature"
+          width={100}
+          height={100}
+          className="object-contain"
+        />
       </div>
     </article>
   );
