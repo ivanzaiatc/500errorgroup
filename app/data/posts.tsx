@@ -13,7 +13,7 @@ export const posts: PostData[] = [
     description: (
       <>
         <p className="mt-3">Over the past months I’ve learned to accept my body and listen to it.</p>
-        <p className="mt-2">You don’t have to be “productive 24/7.</p>
+        <p className="mt-2">You don’t have to be “productive 24/7."</p>
         <p className="mt-2">Some days you’re up, some days you crash — and that’s okay.</p>
         <p className="mt-2">What matters is keeping your direction.</p>
       </>
