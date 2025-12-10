@@ -8,6 +8,18 @@ export interface PostData {
 
 export const posts: PostData[] = [
   {
+    data: "10 Dec 2025",
+    title: "Don't build features, do sales.",
+    description: (
+      <>
+        <p className="mt-3">Today I caught myself trying to implement an AppClips/InstantApps version of my app…</p>
+        <p className="mt-2">because my competitors have it.</p>
+        <p className="mt-2">They also have 1,400+ paying customers. I have just 1.</p>
+        <p className="mt-2">Time to stop coding and start selling.</p>
+      </>
+    ),
+  },
+  {
     data: "9 Dec 2025",
     title: "I’m sick today and spent the whole day in bed.",
     description: (
